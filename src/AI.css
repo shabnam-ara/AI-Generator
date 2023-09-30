@@ -1,0 +1,128 @@
+* {
+    color: #fff;
+  }
+  
+  body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://greenbeanscoffeeomaha.com/wp-content/uploads/2018/08/Story-background-3-1024x576.jpg);
+    background-size: cover; 
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    opacity: 1; 
+    z-index: -1; 
+  }
+  
+  .quote p {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; 
+  }
+  
+  .quote p.show {
+    opacity: 1;
+  }
+  
+  .quote {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  
+  .quote p:first-of-type {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  
+  .quote p:last-of-type {
+    font-size: 1.5rem;
+    font-style: italic;
+    width: 150vh;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  h1 {
+    font-size: 4rem;
+    position: relative;
+    animation-delay: 3s;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  h1::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #000;
+    animation: typing 2s steps(20) forwards;
+  }
+  
+  button {
+    display: block;
+    margin: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #0077cc;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  
+  }
+  .btn{
+    display: flex;
+    color: aquamarine;
+  }
+  button:hover {
+    background-color: #006699;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    transform: translateY(-2px);
+  }
+  
+  @media (max-width: 700px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+  
+    .quote p:first-of-type {
+      font-size: 2rem;
+    }
+  
+    .quote p:last-of-type {
+      font-size: 1.25rem;
+    }
+  
+    button {
+      font-size: 16px;
+      padding: 8px 16px;
+    }
+  }
+  
